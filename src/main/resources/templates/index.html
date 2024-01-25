@@ -7,6 +7,7 @@
     <link type="text/css" rel="stylesheet" title="Clair" th:href="@{webjars/water.css/out/light.min.css}"/>
     <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/webjars/org.webjars.npm/tocbot/4.25.0/dist/tocbot.css"/>
     <link type="text/css" rel="stylesheet" th:href="@{tocbot-responsive.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{simpleLightbox.css}"/>
     <title>Recette de la confiture figues, noix, vanille</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="Default-Style" content="Système"/>
@@ -20,8 +21,21 @@
 <article>
     <h1>Recette de la confiture figues, noix, vanille</h1>
 
+    <script type="text/javascript" src="/webjars-requirejs-definition.js"></script>
+    <script type="text/javascript" src="/webjars/requirejs/require.min.js"></script>
+    <script type="text/javascript">
+        function gallery() {
+            require(['simple-lightbox'], function (SimpleLightbox) {
+                SimpleLightbox.open({
+                    items: ['figues.jpg', 'noix.jpg', 'vanille.jpg', 'confiture.jpeg']
+                });
+            })
+        }
+    </script>
     <img src="confiture.jpeg"
-         alt="Image d'un pot de confiture de figue avec des figues fraîches découpées et disposées autour"/>
+         alt="Image d'un pot de confiture de figue avec des figues fraîches découpées et disposées autour"
+         onclick="gallery()"
+         style="cursor: pointer"/>
 
     <blockquote>
         <p>Probably one of the best jam I ever eat!</p>
