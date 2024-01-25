@@ -5,6 +5,8 @@
     <link type="text/css" rel="stylesheet" title="Système" th:href="@{webjars/water.css/out/water.min.css}"/>
     <link type="text/css" rel="stylesheet" title="Sombre" th:href="@{webjars/water.css/out/dark.min.css}"/>
     <link type="text/css" rel="stylesheet" title="Clair" th:href="@{webjars/water.css/out/light.min.css}"/>
+    <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/webjars/org.webjars.npm/tocbot/4.25.0/dist/tocbot.css"/>
+    <link type="text/css" rel="stylesheet" th:href="@{tocbot-responsive.css}"/>
     <title>Recette de la confiture figues, noix, vanille</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="Default-Style" content="Système"/>
@@ -12,6 +14,8 @@
 <body>
 
 <div id="theme-switcher"></div>
+
+<nav id="toc" class="toc toc-right js-toc"></nav>
 
 <article>
     <h1>Recette de la confiture figues, noix, vanille</h1>
@@ -93,6 +97,20 @@
             label: 'Thème :',
             stylesheets,
         },
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/webjars/org.webjars.npm/tocbot/4.25.0/dist/tocbot.min.js"></script>
+<script type="text/javascript">
+    tocbot.init({
+        tocSelector: '#toc',
+        contentSelector: 'article',
+        headingSelector: 'h2',
+        positionFixedSelector: '#toc',
+        includeHtml: true,
+        includeTitleTags: false,
+        hasInnerContainers: true,
+        headingsOffset: 40,
+        scrollSmoothOffset: -40
     });
 </script>
 </body>

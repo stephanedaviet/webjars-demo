@@ -46,6 +46,11 @@
 			<artifactId>stylesheet-switcher</artifactId>
 			<version>3.0.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>tocbot</artifactId>
+			<version>4.25.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.webjars</groupId>
