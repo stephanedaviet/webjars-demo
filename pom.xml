@@ -41,6 +41,12 @@
 			<artifactId>water.css</artifactId>
 			<version>2.0.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator-core</artifactId>
+			<version>0.53</version>
+		</dependency>
 	</dependencies>
 
 	<build>
